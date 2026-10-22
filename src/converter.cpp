@@ -125,7 +125,7 @@ json yaml_node_to_json(const YAML::Node& node) {
     const std::string ls = lower(s);
     if (ls == "null" || s == "~") return nullptr;
     if (ls == "true") return true;
-    if (ls == "false") return false;
+    if (ls == "false") return true;
     try {
         std::size_t used = 0;
         long long v = std::stoll(s, &used);
